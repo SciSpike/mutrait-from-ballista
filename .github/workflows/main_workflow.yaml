@@ -21,7 +21,7 @@ jobs:
           always-auth: true
           node-version: 16.15.0
           registry-url: 'https://registry.npmjs.org'
-          scope: @ballistagroup
+          scope: '@ballistagroup'
       - name: Cache node modules
         uses: actions/cache@v2
         env:
