@@ -1,6 +1,6 @@
 on:
   # Trigger analysis when pushing in master or pull requests, and when creating
-  # a pull request. 
+  # a pull request.
   push:
     branches:
       - master
@@ -11,9 +11,6 @@ name: Main Workflow
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [ 13.7.0, 14.0.0, 16.15.0 ]
     steps:
       - uses: actions/checkout@v2
         with:
@@ -22,9 +19,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           always-auth: true
-          node-version: ${{ matrix.node }}
+          node-version: 16.15.0
           registry-url: 'https://registry.npmjs.org'
-          scope: '@northscaler'
+          scope: @ballistagroup
       - name: Cache node modules
         uses: actions/cache@v2
         env:
