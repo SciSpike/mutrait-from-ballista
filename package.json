@@ -17,7 +17,6 @@
   "engines": {
     "node": ">=8.6.0"
   },
-  "main": "index.js",
   "scripts": {
     "build": "npm install && npm test",
     "transpile": "run-s transpile-main transpile-test",
